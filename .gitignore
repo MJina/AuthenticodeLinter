@@ -1,0 +1,10 @@
+*.lock.json
+*.nuget.props
+*.nuget.targets
+bin/
+obj/
+out/
+*.suo
+*.user
+*.vs/
+

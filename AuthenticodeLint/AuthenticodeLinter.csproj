@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>authlint</AssemblyName>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <VersionPrefix>0.12.0</VersionPrefix>
+    <Authors>Kevin Jones</Authors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Copyright>Kevin Jones 2016-2018</Copyright>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>authlint</ToolCommandName>
+    <Description>Authenticode Linter is a Windows command-line tool for linting an examining an Authenticode signed file.</Description>
+    <Authors>Kevin Jones</Authors>
+    <PackageTags>authenticode</PackageTags>
+    <PackageProjectUrl>https://github.com/vcsjones/AuthenticodeLint</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vcsjones/AuthenticodeLint</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Tests\10016-ChainEKURule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.6.0" />
+    <PackageReference Include="System.Drawing.Common" Version="4.6.0" />
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+    <PackageReference Include="System.Security.Permissions" Version="4.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AuthenticodeExaminer">
+      <HintPath>..\..\..\AuthenticodeLint-master-\AuthenticodeLint-master\AuthenticodeLint\bin\Release\netcoreapp2.1\publish\AuthenticodeExaminer.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\AuthenticodeLint-master-\AuthenticodeLint-master\AuthenticodeLint\bin\Debug\netcoreapp2.1\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager">
+      <HintPath>..\..\..\..\.nuget\packages\system.configuration.configurationmanager\4.6.0\ref\netstandard2.0\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\Framework64\v4.0.30319\System.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.2\Facades\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs">
+      <HintPath>..\..\..\AuthenticodeLint-master-\AuthenticodeLint-master\AuthenticodeLint\bin\Release\netcoreapp2.1\publish\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="VirusTotalNet">
+      <HintPath>..\..\..\..\Downloads\VirusTotalNet-master\VirusTotalNet-master\src\VirusTotalNet\bin\Debug\netstandard2.0\VirusTotalNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
